@@ -15,6 +15,6 @@ COPY builder.sh /
 RUN chmod +x /builder.sh
 
 RUN mkdir /app
-COPY app/Dockerfile /app
+COPY app/Dockerfile /app/Dockerfile
 
 ENTRYPOINT ["/builder.sh"]
