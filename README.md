@@ -7,7 +7,7 @@ This image is based on the official _golang:alpine_ image, and adds some feature
 - Docker: 1.9.1
 
 ## Usage
-1. Create an image with your Go application
+### 1. Create an image with your Go application
 
 ```
 docker run --rm \
@@ -16,7 +16,7 @@ docker run --rm \
   gobuilder me/mygoapp
 ```
 
-2. Run your application
+### 2. Run your application
 
 ```
 docker run me/mygoapp
