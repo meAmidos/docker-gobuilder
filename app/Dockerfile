@@ -1,3 +1,4 @@
 FROM scratch
-COPY app.run /
-ENTRYPOINT ["/app.run"]
+COPY build /app
+VOLUME /app
+ENTRYPOINT ["/app/app.run"]
