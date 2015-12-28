@@ -60,6 +60,10 @@ function copy_app_dirs {
 	local split_dirs=($inc_dirs)
 
 	echo "Copy selected app files and directories:"
+	
+	# Root destination for files and directories that are being copied
+	mkdir -p /app/build
+	
 	cd /go/app
 	for i in "${split_dirs[@]}"
 	do
