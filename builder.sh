@@ -59,14 +59,23 @@ function copy_app_dirs {
 	local inc_dirs=$1
 	local split_dirs=($inc_dirs)
 
-	echo "Copy selected app directories:"
+	echo "Copy selected app files and directories:"
 	cd /go/app
 	for i in "${split_dirs[@]}"
 	do
 		echo "...$i"
-		mkdir -p /app/build/$i
-		cd $i && cp -R . /app/build/$i
-		cd ..
+		if [ ! -f "$i" ]; then
+			echo "Skip $i, does not exist"
+			continue
+		fi
+
+		if [ -d "$i" ]; then
+			mkdir -p /app/build/$i
+			cd $i && cp -R . /app/build/$i
+			cd ..
+		else
+			cp $i /app/build/$i
+		fi
 	done
 }
 
