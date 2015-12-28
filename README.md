@@ -9,7 +9,7 @@ This image is based on the official _golang:alpine_ image, and adds some feature
 ## Usage
 ### 1. Create an image with your Go application
 
-In this example the name of the resulting image is me/mygoapp, and it will have included some directories from the initial app source: conf, static and views. Including arbitrary directories from the source could be of a vital importance, if you are dockerizing a wep application, for example.
+In this example the name of the resulting image is me/mygoapp, and it will have included some files and directories from the initial app source: conf.yml, static and views. Including arbitrary directories or files from the source could be of a vital importance, if you are dockerizing a wep application, for example.
 
 ```
 docker run --rm \
@@ -17,7 +17,7 @@ docker run --rm \
   -v /var/run/docker.sock:/var/run/docker.sock \
   gobuilder \
   -n me/mygoapp \
-  -d "conf static views"
+  -d "conf.yml static views"
 ```
 
 ### 2. Run your application
@@ -29,7 +29,7 @@ docker run me/mygoapp
 ## Parameters of the builder
 
  - ```-n```: The resulting image name. Required.
- - ```-d```: A string with a space separated list of directories to be baked into the image. Directories must be relative to the project source directory.
+ - ```-d```: A string with a space separated list of directories and/or files to be baked into the image. All paths must be relative to the project source directory.
 
 ## Details
 
