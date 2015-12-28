@@ -9,7 +9,7 @@ This image is based on the official _golang:alpine_ image, and adds some feature
 ## Usage
 ### 1. Create an image with your Go application
 
-In this example the name of the resulting image is me/mygoapp, and it will have included some files and directories from the initial app source: conf.yml, static and views. Including arbitrary directories or files from the source could be of a vital importance, if you are dockerizing a wep application, for example.
+In this example the name of the resulting image is me/mygoapp, and it will have included some files and directories from the initial app source: ```conf.yml```, ```static``` and ```views```. Including arbitrary directories or files from the source could be of a vital importance, if you are dockerizing a wep application, for example.
 
 ```
 docker run --rm \
