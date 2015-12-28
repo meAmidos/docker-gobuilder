@@ -29,7 +29,7 @@ docker run me/mygoapp
 ## Parameters of the builder
 
  - ```-n```: The resulting image name. Required.
- - ```-d```: A string with a space separated list of directories to be backed into the image. Directories must be relative to the project source directory.
+ - ```-d```: A string with a space separated list of directories to be baked into the image. Directories must be relative to the project source directory.
 
 ## Details
 
