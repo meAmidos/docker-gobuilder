@@ -4,7 +4,7 @@ This image is based on the official _golang:alpine_ image, and adds some feature
 
 ## Used versions:
 - Go: 1.5.2
-- Docker: 1.9.1
+- Docker: 1.10.1
 
 ## Usage
 ### 1. Create an image with your Go application
